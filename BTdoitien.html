@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BTdoitien</title>
+</head>
+<body>
+<form style="border: aqua">
+    Amount
+    <input id="tien" type="number"/>
+
+    From Currency
+    <select id="vao" name="Tenquocgia">
+        <option>VNĐ</option>
+        <option>USD</option>
+    </select>
+
+    To Currency
+    <select id="ra" name="Tenquocgia">
+        <option>USD</option>
+        <option>VNĐ</option>
+    </select>
+
+    <button onclick="doitien()">Convert</button>
+</form>
+<script>
+    function doitien() {
+        let tien = document.getElementById('tien').value;
+        let dadoi;
+        let ra = document.getElementById('ra').value;
+        let vao = document.getElementById('vao').value;
+
+        if (vao === "USA" && ra === "VNĐ") {
+            dadoi = tien * 23000;
+            alert("số tiền sau đổi:" + dadoi)
+        } else {
+            dadoi = tien / 23000;
+            alert('số tiền sau đổi:' + dadoi)
+        }
+    }
+
+</script>
+</body>
+</html>
