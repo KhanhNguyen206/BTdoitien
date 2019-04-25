@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BTdoitiennangcao</title>
+</head>
+<body>
+
+Amount
+<input id="tien" type="number"/>
+
+From Currency
+<select id="from" name="Tenquocgia">
+    <option value="1.4">AUD</option>
+    <option value="1.3">CAD</option>
+    <option value="1.04">CHF</option>
+    <option value="0.85">EUR</option>
+    <option value="0.76">GBP</option>
+    <option value="115">JPY</option>
+    <option value="1.3">SGD</option>
+    <option value="32">THB</option>
+    <option value="23000">VNĐ</option>
+    <option value="1">USD</option>
+</select>
+
+To Currency
+<select id="to" name="Tenquocgia">
+    <option value="1.4">AUD</option>
+    <option value="1.3">CAD</option>
+    <option value="1.04">CHF</option>
+    <option value="0.85">EUR</option>
+    <option value="0.76">GBP</option>
+    <option value="115">JPY</option>
+    <option value="1.3">SGD</option>
+    <option value="32">THB</option>
+    <option value="23000">VNĐ</option>
+    <option value="1">USD</option>
+</select>
+
+<button onclick="doitien()">Convert</button>
+</form>
+<script>
+    function doitien() {
+        let tien = parseFloat(document.getElementById('tien').value);
+        let dadoi;
+        let to = parseFloat(document.getElementById('to').value);
+        let from = parseFloat(document.getElementById('from').value);
+        dadoi =(tien*to)/from;
+        alert("đã đổi: " + dadoi);
+    }
+    </script>
+</body>
+</html>
